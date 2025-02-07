@@ -1,0 +1,1 @@
+The user uploads photo to the site. The site then shows the option to crop it to passport size ohoto dimensions (35mm × 45mm). After cropping it makes a single page A4 size pdf with 32 copies of the uploaded image. This site is useful if the user wants to print a photo in A4 size sheet and get multiple photos.
