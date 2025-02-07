@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passport Photo Generator</title>
+    <title>PassportSize Photo to A4 Sheet PDF</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+</style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <input type="file" id="photoInput" accept="image/*">
-        <button id="cropButton" class="button hidden">Crop Image</button>
-        <button id="downloadButton" class="button hidden">Download PDF</button>
-        <div id="previewContainer"></div>
-        <canvas id="outputCanvas" class="hidden"></canvas>
+        <header class="header">
+            <h1>Passport Size Photo to A4 Size PDF</h1>
+            <p class="subtitle">Create A4 size PDF with 32 perfect passport size photos in seconds</p>
+        </header>
+
+        <div class="workflow">
+            <div class="upload-section">
+                <label class="upload-btn">
+                    <input type="file" id="photoInput" accept="image/*">
+                    Upload Photo
+                </label>
+                <p class="instruction">Supported formats: JPG, PNG</p>
+            </div>
+
+            <div id="previewContainer" class="preview-area">
+                <div class="preview-placeholder">
+                    <span class="placeholder-text">Your photo preview will appear here</span>
+                </div>
+            </div>
+
+            <div class="processing-section">
+                <button id="cropButton" class="btn secondary hidden">Crop Image</button>
+                <button id="downloadButton" class="btn primary hidden">Download PDF</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>How it works:</h2>
+            <ol class="steps">
+                <li>📤 Upload a high-quality portrait photo</li>
+                <li>✂️ Crop to official ID photo dimensions</li>
+                <li>📥 Download print-ready A4 sheet with 32 perfect copies</li>
+            </ol>
+        </div>
     </div>
     
+    <footer class="site-footer">
+    <p>Created by <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Rohit Mishra</a></p>
+    </footer>
+
+    <canvas id="outputCanvas" class="hidden"></canvas>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
