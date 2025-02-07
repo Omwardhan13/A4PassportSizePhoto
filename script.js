@@ -78,5 +78,5 @@ document.getElementById('downloadButton').addEventListener('click', function() {
 
     pdf.link(x, y - 10, textWidth, 12, { url: 'https://omwardhan13.github.io/A4PassportSizePhoto' });
 
-    pdf.save('passport_photos.pdf');
+    pdf.save('A4_PassoprtSizePhotos.pdf');
 });
