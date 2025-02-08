@@ -73,7 +73,7 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     const textWidth = pdf.getTextWidth(footerText);
     const x = (pageWidth - textWidth) / 2;
     const y = pageHeight - 30;
-    pdf.setTextColor(115, 194, 251);
+    pdf.setTextColor(51, 156, 255);
     pdf.text(x, y, footerText);
 
     pdf.link(x, y - 10, textWidth, 12, { url: 'https://omwardhan13.github.io/A4PassportSizePhoto' });
