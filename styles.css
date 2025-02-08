@@ -129,6 +129,9 @@ body {
 }
 
 .preview-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #D7ECFB;
     border: 2px dashed var(--primary-dark);
     border-radius: 8px;
@@ -147,6 +150,23 @@ body {
 .placeholder-text {
     color: var(--primary-dark);
     opacity: 0.7;
+}
+
+.image-container {
+    max-width: 80%; /* Prevents overflow */
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.full-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .instructions {
@@ -210,19 +230,19 @@ body {
     .container {
         padding: 1rem;
     }
-    
+
     .header h1 {
         font-size: 2rem;
     }
-    
+
     .preview-area {
         min-height: 300px;
     }
-    
+
     .processing-section {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
     }
