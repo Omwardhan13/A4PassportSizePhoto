@@ -224,6 +224,203 @@ body {
     display: none;
 }
 
+#thumbnails img {
+    width: 64px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 2px solid rgba(20,33,61,0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* small caption for counter */
+#imageCounter { font-weight:600; }
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .preview-area {
+        min-height: 300px;
+    }
+
+    .processing-section {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.workflow {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.upload-section {
+    text-align: center;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+}
+
+.upload-btn input[type="file"] {
+    display: none;
+}
+
+.processing-section {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn.primary {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn.secondary {
+    background-color: var(--primary-dark);
+    color: var(--white);
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.preview-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #D7ECFB;
+    border: 2px dashed var(--primary-dark);
+    border-radius: 8px;
+    min-height: 400px;
+    position: relative;
+}
+
+.preview-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.placeholder-text {
+    color: var(--primary-dark);
+    opacity: 0.7;
+}
+
+.image-container {
+    max-width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.full-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.instructions {
+    background-color: #D7ECFB;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.steps {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+.steps li {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background-color: var(--white);
+    border-radius: 6px;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#preview {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.cropper-view-box {
+    border-radius: 4px;
+    outline-color: var(--accent);
+    outline-width: 2px;
+}
+
+.cropper-line {
+    background-color: var(--accent);
+}
+
+.cropper-point {
+    background-color: var(--white);
+    border: 2px solid var(--accent);
+    opacity: 1;
+}
+
+#outputCanvas {
+    display: none;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
