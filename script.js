@@ -288,20 +288,3 @@ downloadButton.addEventListener('click', function() {
 
 // initialize UI
 updateUIVisibility();
-            const x = xOffset + col * (imgWidth + padding);
-            const y = padding + row * (imgHeight + padding);
-            pdf.addImage(croppedImageData, 'JPEG', x, y, imgWidth, imgHeight);
-        }
-    }
-
-    const footerText = "PassportSize Photo to A4 Generator - Omwardhan Mishra";
-    const textWidth = pdf.getTextWidth(footerText);
-    const x = (pageWidth - textWidth) / 2;
-    const y = pageHeight - 30;
-    pdf.setTextColor(51, 156, 255);
-    pdf.text(x, y, footerText);
-
-    pdf.link(x, y - 10, textWidth, 12, { url: 'https://omwardhan13.github.io/A4PassportSizePhoto' });
-
-    pdf.save('A4_PassoprtSizePhotos.pdf');
-});
